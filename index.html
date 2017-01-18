@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css" />
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css" />
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+    <h2>Slick</h2>
+
+    <div class="your-class">
+        <div>your content 1</div>
+        <div>your content 2</div>
+        <div>your content 3</div>
+        <div>your content 4</div>
+        <div>your content 5</div>
+        <div>your content 6</div>        
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.your-class').slick({
+
+            // normal options...
+            infinite: false,
+
+            // the magic
+            responsive: [{
+
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: true,
+                    dots: true
+                }
+
+            }, {
+
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true
+                }
+
+            }, {
+                breakpoint: 300,
+                settings: "unslick" // destroys slick
+            }]
+        });
+    });
+</script>
+
+</body>
+
+</html>
